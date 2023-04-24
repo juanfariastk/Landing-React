@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    margin:0;
+}
 
 
 /*
@@ -320,7 +323,13 @@ button {
 }
 
 .primeira-secao {
-    margin-top: 0;
-    padding: 485px;
+    padding: 0;
     background-color: white;
+}
+
+
+.img_suquinho{
+    width: 655.5px;
+    height: 918px;
+    margin-left: 0;
 }
