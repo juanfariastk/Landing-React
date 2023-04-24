@@ -1,8 +1,9 @@
-*{
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 /*
 input:focus, textarea:focus, select:focus {
@@ -14,308 +15,312 @@ input:focus, textarea:focus, select:focus {
 */
 
 button {
-  border: 0;
-  background-color: transparent;
+    border: 0;
+    background-color: transparent;
 }
 
-html{
-  scroll-behavior: smooth;
-  scroll-padding-top: 75px;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
 }
 
-body{
-  font-weight: 400;
-  overflow-x: hidden;
-  position: relative;
-  background-color: #fdfaf5 !important;
-  color:  #1b1c31 ;
-  font-family: 'Montserrat', sans-serif !important;
+body {
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #fdfaf5 !important;
+    color: #1b1c31;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, h6{
-  margin:0;
-  padding: 0;
-  line-height: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
 }
 
-nav.navbar{
-  padding: 10px 0;
-  position: fixed;
-  z-index: 9999;
-  width: 100%;
-  top: -100px;
-  background-color: #1a1b2b3f;
-  transition: top 0.35s ease-in-out;
+nav.navbar {
+    padding: 10px 0;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: -100px;
+    background-color: #1a1b2b3f;
+    transition: top 0.35s ease-in-out;
 }
 
 nav.navbar.visible {
-  top: 0;
+    top: 0;
 }
 
-
-nav.navbar a.navbar-brand{
-  width: 10%;
+nav.navbar a.navbar-brand {
+    width: 10%;
 }
 
-.nav.navbar .navbar-nav .nav-link.navbar-navbar-link{
-  font-weight: 400;
-  color: #121320;
-  letter-spacing: 0.9px;
-  padding: 0 30px;
-  font-size: 17px;
-  opacity: 0.7;
-  position: relative;
+.nav.navbar .navbar-nav .nav-link.navbar-navbar-link {
+    font-weight: 400;
+    color: #121320;
+    letter-spacing: 0.9px;
+    padding: 0 30px;
+    font-size: 17px;
+    opacity: 0.7;
+    position: relative;
 }
 
 .navbar-nav .nav-link {
-  position: relative;
-  color: #121320;
-  font-weight: 400;
-  letter-spacing: 0.9px;
-  font-size: 17px;
-  padding: 0 30px;
-  opacity: 0.7;
-  }
-  
-  .navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 2px;
-  background-color: #121320;
-  transform: scaleX(0);
-  transition: transform 0.2s ease-out;
-  }
-  
-  .navbar-nav .nav-link:hover::after {
-  transform: scaleX(0.8);
-  }
-  
-  .navbar-nav .nav-link.active::after {
-  transform: scaleX(0.4);
-  }
+    position: relative;
+    color: #121320;
+    font-weight: 400;
+    letter-spacing: 0.9px;
+    font-size: 17px;
+    padding: 0 30px;
+    opacity: 0.7;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #121320;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(0.8);
+}
+
+.navbar-nav .nav-link.active::after {
+    transform: scaleX(0.4);
+}
 
 progress {
-  position: fixed;
-  z-index: 100;
-  bottom: 0;
-  left: 0;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 12px;
-  border: none;
-  background: transparent;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 12px;
+    border: none;
+    background: transparent;
 }
 
 progress::-webkit-progress-bar {
-  opacity: 1;
-  background: #0707071f;
+    opacity: 1;
+    background: #0707071f;
 }
 
 progress::-webkit-progress-value {
-  background-color: #44b4f5;
+    background-color: #44b4f5;
 }
 
-nav.navbar.scrolled{
-  padding: 10px 0px;
-  background: linear-gradient(45deg, #212830bd,  #758492b9);
-  background-size: 300% 300%;
-  animation: cores 15s ease infinite;
+nav.navbar.scrolled {
+    padding: 10px 0px;
+    background: linear-gradient(45deg, #212830bd, #758492b9);
+    background-size: 300% 300%;
+    animation: cores 15s ease infinite;
 }
 
 nav.navbar.scrolled .navbar-nav .nav-link.navbar-link {
-  color: white;
-}
-nav.navbar.scrolled .navbar-nav .nav-link.navbar-link:hover {
-  color: rgb(185, 185, 185);
+    color: white;
 }
 
-.banner{
-  margin-top: 0;
-  padding: 400px 0 380px 0;
-  background-image: url('./assets/1600w-_Tcjok-d9b4\ \(1\).png');
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative; 
+nav.navbar.scrolled .navbar-nav .nav-link.navbar-link:hover {
+    color: rgb(185, 185, 185);
 }
+
+.banner {
+    margin-top: 0;
+    padding: 400px 0 380px 0;
+    background-image: url('./assets/1600w-_Tcjok-d9b4\ \(1\).png');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
 .img-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  top: auto;
-  margin-top: auto;
-  margin-bottom: 0;
-  width: 50%; 
-  height: 100%; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: auto;
+    margin-top: auto;
+    margin-bottom: 0;
+    width: 50%;
+    height: 100%;
 }
 
 .img-rosinha {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-
 @keyframes cores {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .fab {
-  position: fixed;
-  right: 30px;
-  bottom: 38px;
-  border-radius: 50%;
-  z-index: 1000000;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.247);
+    position: fixed;
+    right: 30px;
+    bottom: 38px;
+    border-radius: 50%;
+    z-index: 1000000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.247);
 }
 
 button {
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  font-family: inherit;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
 }
 
-.fab > button {
-  position: relative;
-  z-index: 1000000;
-  display: grid;
-  place-items: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 0;
-  background: #54bbbb;
-  color: #ffffff;
-  text-shadow: 2px 2px #ff0000;
-  transition: 0.2s;
+.fab>button {
+    position: relative;
+    z-index: 1000000;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 0;
+    background: #5bc9c9;
+    color: #ffffff;
+    text-shadow: 2px 2px #ff0000;
+    transition: 0.2s;
 }
 
-.fab > button > i {
-  font-size: 32px;
+.fab>button>i {
+    font-size: 32px;
 }
 
 .menu {
-  position: absolute;
-  bottom: 76px;
-  left: 0;
-  display: grid;
-  place-content: center;
-  gap: 12px;
-  width: 64px;
-  scale: 0;
-  translate: 0 80%;
-  transform-origin: 50% 50%;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.375s ease-in-out;
+    position: absolute;
+    bottom: 76px;
+    left: 0;
+    display: grid;
+    place-content: center;
+    gap: 12px;
+    width: 64px;
+    scale: 0;
+    translate: 0 80%;
+    transform-origin: 50% 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.375s ease-in-out;
 }
 
-.fab.open > button {
-  rotate: 45deg;
+.fab.open>button {
+    rotate: 45deg;
 }
 
 .fab.open .menu {
-  scale: 1;
-  translate: 0;
-  opacity: 1;
-  visibility: visible;
+    scale: 1;
+    translate: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
-.menu > button {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #333535d7;
-  color: #ffffff;
-  transition: 0.3s;
+.menu>button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #333535d7;
+    color: #ffffff;
+    transition: 0.3s;
 }
 
-.menu .span-menu{
-  color: black;
+.menu .span-menu {
+    color: black;
 }
 
-.menu > button:hover {
-  background: rgba(70, 68, 68, 0.16);
+.menu>button:hover {
+    background: rgba(70, 68, 68, 0.16);
 }
 
-.menu > button > span {
-  position: absolute;
-  right: 64px;
-  white-space: nowrap;
-  translate: 10px 0;
-  opacity: 0;
-  visibility: hidden;
-  font-size: 16px;
-  transition: 0.5s;
+.menu>button>span {
+    position: absolute;
+    right: 64px;
+    white-space: nowrap;
+    translate: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 16px;
+    transition: 0.5s;
 }
 
-.menu > button:hover > span {
-  translate: 0;
-  opacity: 1;
-  visibility: visible;
+.menu>button:hover>span {
+    translate: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
 .alert-botao {
-  position: fixed !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  animation: fadeIn 1s forwards, fadeOut 2s 2s forwards;
-  opacity: 0;
-  visibility: hidden;
+    position: fixed !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    animation: fadeIn 1s forwards, fadeOut 2s 2s forwards;
+    opacity: 0;
+    visibility: hidden;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    visibility: hidden;
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
-  }
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @keyframes fadeOut {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .my-button {
-  background-color: #40c5ba !important;
-  border-color: #4bc0c0 !important;
+    background-color: #40c5ba !important;
+    border-color: #4bc0c0 !important;
 }
 
 .my-button:hover {
-  background-color: #42a7a7 !important;
+    background-color: #42a7a7 !important;
 }
 
-
-.primeira-secao{
-  margin-top: 0;
-  padding: 485px ;
+.primeira-secao {
+    margin-top: 0;
+    padding: 485px;
+    background-color: black;
 }

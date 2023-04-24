@@ -10,7 +10,7 @@ import gsap, {Expo} from "gsap";
 const theme = createTheme({
     palette: {
       secondary: {
-        main: "#6fa8dc"
+        main: "#5dcfcf"
       }
     }
   });

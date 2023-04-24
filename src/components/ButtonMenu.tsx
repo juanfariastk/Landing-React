@@ -16,14 +16,11 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
     const [botaoAberto, setAberto] = useState<boolean>(false)
     const [show, setShow] = useState<boolean>(false)
     const [show2, setShow2] = useState<boolean>(false)
-  
-    const handleClose = () => {
-      setShow(false)
-      setShow2(true)
-    }
+    const [show3, setShow3] = useState<boolean>(false)
   
     const handleEnviar = () => {
       setShow(false)
+      setShow3(false)
       setShow2(true)
     }
   
@@ -76,10 +73,37 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
               </Button>
             </Modal.Footer>
           </Modal>
-          <button>
+          <button onClick={() => setShow3(true)}>
             <SvgIcon component={StarPurple500Icon} />
             <span className="span-menu">Avalie-nos</span>
           </button>
+          <Modal
+            show={show3}
+            onHide={() => setShow3(false)}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>Avaliação</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                  <Form.Label>Avalie-nos! </Form.Label>
+                  <Form.Control type="text" placeholder="Deixe uma avaliação" autoFocus />
+                </Form.Group>
+              </Form>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="danger" onClick={() => setShow3(false)}>
+                Fechar
+              </Button>
+              <Button className="my-button" onClick={handleEnviar}>
+                Enviar Avaliação <span> <SvgIcon component={SendIcon} /></span>
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </div>
         {show2 && (
           <Alert variant="success" className="alert-botao" onClose={() => setShow2(false)} dismissible>
