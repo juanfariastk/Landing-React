@@ -1,12 +1,57 @@
 import React from "react";
 import { FC, PropsWithChildren, useState, useEffect } from "react";
+import { Modal, Form, Button, Alert } from "react-bootstrap";
 import { SvgIcon } from "@mui/material";
+import { styled } from '@mui/material/styles';
 import AddIcon from "@mui/icons-material/Add";
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import StarPurple500Icon from '@mui/icons-material/StarPurple500';
 import SendIcon from '@mui/icons-material/Send';
-import { Modal, Form, Button, Alert } from "react-bootstrap";
+import Rating, { IconContainerProps } from '@mui/material/Rating';
+import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
+import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
+import SentimentSatisfiedIcon from '@mui/icons-material/SentimentSatisfied';
+import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAltOutlined';
+import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 
+const StyledRating = styled(Rating)(({ theme }) => ({
+  '& .MuiRating-iconEmpty .MuiSvgIcon-root': {
+    color: theme.palette.action.disabled,
+  },
+}));
+
+const customIcons: {
+  [index: string]: {
+    icon: React.ReactElement;
+    label: string;
+  };
+} = {
+  1: {
+    icon: <SentimentVeryDissatisfiedIcon color="error" />,
+    label: 'Very Dissatisfied',
+  },
+  2: {
+    icon: <SentimentDissatisfiedIcon color="error" />,
+    label: 'Dissatisfied',
+  },
+  3: {
+    icon: <SentimentSatisfiedIcon color="warning" />,
+    label: 'Neutral',
+  },
+  4: {
+    icon: <SentimentSatisfiedAltIcon color="success" />,
+    label: 'Satisfied',
+  },
+  5: {
+    icon: <SentimentVerySatisfiedIcon color="success" />,
+    label: 'Very Satisfied',
+  },
+};
+
+function IconContainer(props: IconContainerProps) {
+  const { value, ...other } = props;
+  return <span {...other}>{customIcons[value].icon}</span>;
+}
 
 const Icon: FC<PropsWithChildren> = ({ children }) => (
     <i className="material-symbols-outlined">{children}</i>
@@ -80,7 +125,7 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
           <Modal
             show={show3}
             onHide={() => setShow3(false)}
-            size="lg"
+            size="sm"
             aria-labelledby="contained-modal-title-vcenter"
             centered
           >
@@ -88,12 +133,19 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
               <Modal.Title>Avaliação</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Form>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                  <Form.Label>Avalie-nos! </Form.Label>
-                  <Form.Control type="text" placeholder="Deixe uma avaliação" autoFocus />
-                </Form.Group>
-              </Form>
+            <Form>
+            <Form.Group className="d-flex flex-column align-items-center mb-3" controlId="exampleForm.ControlInput1">
+            <StyledRating
+                name="highlight-selected-only"
+                defaultValue={2}
+                IconContainerComponent={IconContainer}
+                getLabelText={(value: number) => customIcons[value].label}
+                highlightSelectedOnly className="m-2" />
+            </Form.Group>
+
+              <Form.Control type="text" placeholder="Deixe uma avaliação" autoFocus className="col col-sm-6 p-3" style={{ maxWidth: '300px' }} />
+
+          </Form>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="danger" onClick={() => setShow3(false)}>
