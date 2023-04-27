@@ -3,12 +3,13 @@
 ## Esqueleto de landing page em React
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/juanfariastk/Landing-React?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/juanfariastk/Landing-React?style=for-the-badge)
 
 > Front-end simples, sem integrações com Back-end.
 
 ## 💻 Pré-requisitos
 
-* Nenhum...
+* Node.js version >= 18.16.0
 
 
 ## ☕ Uso:
