@@ -312,13 +312,22 @@ button {
     }
 }
 
-.my-button {
+.button1 {
     background-color: #40c5ba !important;
     border-color: #4bc0c0 !important;
 }
 
-.my-button:hover {
+.button1:hover {
     background-color: #42a7a7 !important;
+}
+
+.button2 {
+    background-color: #40c5a4 !important;
+    border-color: #44aa9c !important;
+}
+
+.button2:hover {
+    background-color: #42a79a !important;
 }
 
 .primeira-secao {
@@ -329,9 +338,13 @@ button {
     background: linear-gradient(172deg, #bcd6e9 50%, #f795de 300%);
 }
 
+.modal-compra{
+    z-index: 999999999 !important;
+}
+
 .img_suquinho {
-    width: 655.5px;
-    height: 918px;
+    width: 327.75px;
+    height: 459px;
     margin-left: 0;
 }
 
@@ -344,8 +357,8 @@ button {
 }
 
 .info-card {
-    margin: 40px;
-    padding: 40px;
+    margin: 30px;
+    padding: 100px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -363,7 +376,7 @@ button {
 }
 
 .info-card img {
-    width: 100%;
+    width: 90%;
     height: auto;
     border-radius: 10px;
 }
@@ -387,3 +400,356 @@ button {
 .info-card button:active {
     background-color: rgb(185, 68, 68);
 }
+
+.ParallaxContainer {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ParallaxContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/gradient-blur-pink-blue-abstract-background_53876-117324.png.avif");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .contato{
+    background:  linear-gradient(90.21deg, #ffffff -5.91%, #ffffff1e 111.58%);;
+    padding: 60px 0 200px 0;
+  }
+  
+  .contato img{
+    width: 92%;
+  }
+  
+  .contato h2{
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .contato form input, .contato form textarea{
+    width: 100%;
+    background: rgba(226, 237, 245, 0.842);
+    border: 1px solid rgb(228, 247, 246);
+    border-radius: 20px;
+    margin: 0 0 8px 0;
+    padding: 18px 26px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .contato form input:focus, .contato form textarea:focus {
+    background: rgba(205, 249, 252, 0.733);
+    
+  }
+  
+  .contato form input::placeholder, .contato form textarea::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .contato form input:focus::placeholder, .contato form textarea:focus::placeholder {
+    opacity: 0.8;
+  }
+  
+  .contato form button {
+    font-weight: 700;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 14px 48px;
+    font-size: 18px;
+    margin-top: 25px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .contato form button span {
+    z-index: 1;
+    position: relative;
+  }
+  
+  .contato form button:hover {
+    color: white;
+  }
+  
+  .contato form button::before {
+    border-radius: 28px;
+    content: "";
+    background: #121212;
+    width: 28%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .contato form button:hover::before {
+    width: 100% !important;
+  }
+
+  .footer-section {
+    background: #151414f3;
+    position: relative;
+    padding-bottom: 50px !important;
+  }
+  .footer-cta {
+    border-bottom: 1px solid #373636;
+    padding-bottom: 30px !important;
+  }
+  .single-cta i {
+    color: #14a1ff;
+    font-size: 30px;
+    float: left;
+    margin-top: 8px;
+  }
+  .cta-text {
+    padding-left: 15px;
+    display: inline-block;
+  }
+  .cta-text h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .cta-text span {
+    color: #bbbbbb;
+    font-size: 15px;
+  }
+  .footer-content {
+    position: relative;
+    z-index: 2;
+  }
+  .footer-pattern img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 330px;
+    background-size: cover;
+    background-position: 100% 100%;
+  }
+  .footer-logo img {
+    max-width: 120px;
+  }
+  .footer-text p {
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #7e7e7e;
+    line-height: 21px;
+  }
+  .footer-social-icon span {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+  }
+  .footer-social-icon a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  .footer-social-icon i {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+  }
+  .facebook-bg {
+    background: #3b5998;
+  }
+  .twitter-bg {
+    background: #55acee;
+  }
+  .google-bg {
+    background: #dd4b39;
+  }
+
+  .footer-widget-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .footer-widget-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: #a0e9ff;
+  }
+  
+  .footer-widget ul li {
+    display: block;
+    margin-bottom: 12px;
+  }
+  
+  .footer-widget ul li a:hover {
+    color: #a0e9ff;
+  }
+  
+  .footer-widget ul li a {
+    color: #878787;
+    text-transform: capitalize;
+  }
+  
+  .subscribe-form {
+    position: relative;
+    overflow: hidden;
+  }
+  .subscribe-form input {
+    width: 100%;
+    padding: 14px 28px;
+    background: #2e2e2e;
+    border: 1px solid #2e2e2e;
+    color: #fff;
+  }
+  
+  .subscribe-form button {
+    position: absolute;
+    right: 0;
+    padding: 13px 20px;
+    top: 0;
+    color:#fff;
+  }
+  
+  .subscribe-form button:hover{
+    background: #359e8d;
+    border: 1px solid #4bc0c0 ;
+  }
+
+  .subscribe-form button i {
+    color: #fff;
+    font-size: 22px;
+    transform: rotate(-6deg);
+  }
+  .footer-menu li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .footer-menu li:hover a {
+    color: #ff5e14;
+  }
+  .footer-menu li a {
+    font-size: 14px;
+    color: #878787;
+  }
+
+  .footer-social-icon .social_icon {
+    text-align: left;
+  }
+  
+  .footer-social-icon .social_icon li {
+    float: inherit !important;
+    display: inline-block !important;
+    width: inherit;
+  }
+  .footer-social-icon .social_icon li a i {
+    font-size: 15px;
+    line-height: 39px;
+  }
+  .footer-social-icon .social_icon li a {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social_icon {
+    text-align: right;
+    margin: 0;
+    margin-top: 3px;
+  }
+  .social_icon li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .social_icon li a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 100%;
+    transition: 0.2s ease-in-out;
+  }
+  .social_icon li a i {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .social_icon li:nth-child(1) a {
+    background: #4267b2;
+    color: #fff;
+  }
+  .social_icon li:nth-child(2) a {
+    background: #1da1f2;
+    color: #fff;
+  }
+  .social_icon li:nth-child(3) a {
+    background: #f09433;
+    background: -moz-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    color: #fff;
+  }
+  .social_icon li:nth-child(4) a {
+    background: #ff0000;
+    color: #fff;
+  }
+  .social_icon li:nth-child(1):hover a {
+    background: #fff;
+    color: #4267b2;
+  }
+  .social_icon li:nth-child(2):hover a {
+    background: #fff;
+    color: #1da1f2;
+  }
+  .social_icon li:nth-child(3):hover a {
+    background: #fff;
+    color: #bc1888;
+  }
+  

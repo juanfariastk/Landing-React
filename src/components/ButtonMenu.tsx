@@ -113,7 +113,7 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
               <Button variant="danger" onClick={() => setShow(false)}>
                 Fechar
               </Button>
-              <Button className="my-button" onClick={handleEnviar}>
+              <Button className="button1" onClick={handleEnviar}>
                 Enviar <span> <SvgIcon component={SendIcon} /></span>
               </Button>
             </Modal.Footer>
@@ -125,7 +125,7 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
           <Modal
             show={show3}
             onHide={() => setShow3(false)}
-            size="sm"
+            size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
           >
@@ -141,9 +141,10 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
                 IconContainerComponent={IconContainer}
                 getLabelText={(value: number) => customIcons[value].label}
                 highlightSelectedOnly className="m-2" />
+                 <Form.Control type="text" placeholder="Deixe uma avaliação" autoFocus className="col col-sm-6 p-3" style={{ maxWidth: '300px' }} />
             </Form.Group>
 
-              <Form.Control type="text" placeholder="Deixe uma avaliação" autoFocus className="col col-sm-6 p-3" style={{ maxWidth: '300px' }} />
+             
 
           </Form>
             </Modal.Body>
@@ -151,7 +152,7 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
               <Button variant="danger" onClick={() => setShow3(false)}>
                 Fechar
               </Button>
-              <Button className="my-button" onClick={handleEnviar}>
+              <Button className="button1" onClick={handleEnviar}>
                 Enviar Avaliação <span> <SvgIcon component={SendIcon} /></span>
               </Button>
             </Modal.Footer>

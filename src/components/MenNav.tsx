@@ -54,8 +54,7 @@ export const MenNav:React.FC = () =>{
                     <Nav className="ms-auto">
                         <Nav.Link href="#home" className={pagAtual === 'home'? 'active navbar-link':'navbar-link'} onClick={ () => mudarLinkAtivo('home')}>Home</Nav.Link>
                         <Nav.Link href="#infosec" className={pagAtual === 'infosec'? 'active navbar-link':'navbar-link'} onClick={ () => mudarLinkAtivo('infosec')}>Informações</Nav.Link>
-                        <Nav.Link href="#quemsomos" className={pagAtual === 'quemsomos'? 'active navbar-link':'navbar-link'} onClick={ () => mudarLinkAtivo('quemsomos')}>Quem somos?</Nav.Link>
-                        <Nav.Link href="#contato" className={pagAtual === 'contato'? 'active navbar-link':'navbar-link'} onClick={ () => mudarLinkAtivo('contato')}>Contato</Nav.Link>
+                        <Nav.Link href="#contatform" className={pagAtual === 'contatform'? 'active navbar-link':'navbar-link'} onClick={ () => mudarLinkAtivo('contatform')}>Contato</Nav.Link>
                     </Nav>
                 </Navbar.Collapse> 
 
